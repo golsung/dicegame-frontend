@@ -1,0 +1,24 @@
+<div class="container-fluid" style="margin: 50px" >
+    <h2>스코아 조회</h2>
+    <div style="margin-top: 100px">
+      <label for="player-name">플레이어 이름</label>
+      <input for="player-name" type="text" [(ngModel)]="playerName">
+      <button (click)="showScore(playerName)">조회</button>
+    </div>
+
+    <table class="table table-hover" *ngIf="playerName" style="margin-top: 100px">
+
+          <tr>
+            <td>승</td>
+            <td>패</td>
+            <td>무</td>
+            <td>점수</td>
+          </tr>
+          <tr>
+            <td>{{score.win}}</td>
+            <td>{{score.lose}}</td>
+            <td>{{score.draw}}</td>
+            <td>{{score.totScore}}</td>
+          </tr>
+      </table>
+  </div>

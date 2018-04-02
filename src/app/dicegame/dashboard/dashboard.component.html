@@ -1,0 +1,24 @@
+<div class="container-fluid" style="margin-top: 100px ">
+  <table>
+      <tr>
+        <td>{{_playerName}}<td> <img id="dice1" src="{{playerDice}}" width="150" height="150"  /></td>
+        <td><button [disabled]="!canPlay" (click)="roll()">roll</button></td>
+        <td><button [disabled]="!canStop" (click)="rollStop()">stop</button></td>
+        <td>{{ranNum1}}</td>
+      
+        <td colspan=2><label><h2 style="background-color:powderblue;">위치</h2></label></td>
+        <td colspan=2><div style="border:4px solid powderblue; width:150px; height:150px text-align:center padding:0">
+            <h1 id="dice" style="font-size:300%">{{curCellPos1}}</h1></div></td>
+      </tr>
+      <tr>
+        <td> 알파다이스</td><td> <img id="dice2" src="{{alphaDice}}" width="150" height="150"  /></td>
+        <td>{{ranNum2}}</td>
+        <td></td>
+        <td></td>
+        <td colspan=2><label><h2 style="background-color:powderblue;">위치</h2></label></td>
+        <td colspan=2><div style="border:4px solid powderblue; width:150px; height:150px  padding:0">
+            <h1 id="dice" style="font-size:300%">{{curCellPos2}}</h1></div></td>
+      </tr>
+  </table>
+</div>
+

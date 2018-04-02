@@ -1,0 +1,10 @@
+<div class="container-fluid" style="margin: 50px" >
+  <h2>Welcome to Dice World!</h2>
+  <div style="margin-top: 100px">
+    <label for="player-name">플레이어 이름</label>
+    <input for="player-name" type="text" [(ngModel)]="playerName">
+    <button (click)="startGame(playerName)">시작</button>
+  </div>
+
+  <app-dashboard [player]="enteredPlayerName" (onGameFinished)="openDialog($event)" *ngIf="enteredPlayerName"></app-dashboard>
+</div>
